@@ -9,31 +9,11 @@ require('../styles/default.scss');
 const Speech = (props) => {
   const [animating, setAnimating] = useState(false);
   const [isPlay, setIsPlay] = useState(false);
-  
+  /*
   useEffect(() => {
-    if(props.isOpen){
-    }else{
-
-    }
-    /*
-    if(props.isOpen){
-      setOverlayStyle({display: "block", opacity: "0"});
-      setplayControllerStyle({display: "block", opacity: "0"});
-      setOverlayStyle({display: "block", opacity: "0"});
-      setTimeout(() => {
-        setOverlayStyle({display: "block", opacity: "1"});
-        setplayControllerStyle({display: "block", opacity: "1"});
-      },100);
-    }else{
-      setOverlayStyle({display: "block", opacity: "0"});
-      setplayControllerStyle({display: "block", opacity: "0"});
-      setTimeout(() => {
-        setOverlayStyle({display: "none", opacity: "0"});
-        setplayControllerStyle({display: "none", opacity: "0"});
-      },transition);
-    }
-    */
+    
   },[props.isOpen],);
+  */
 
   const defaultProps = {
     title: props.title,

@@ -1,11 +1,12 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render } from 'react-dom'
+import Speech from '../src/component/Speech'
 
-
-const rootEl = document.getElementById('app');
-
-render(<App />, rootEl);
-
-if (module.hot) {
-    module.hot.accept();
-}
+const App = () => {
+  return(
+    <Speech>
+      test
+    </Speech>
+  );
+};
+render(<App />, document.getElementById('root'));

@@ -1,18 +1,16 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+//const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
-
+/*
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: "./src/client/index.html",
   filename: "./index.html"
 });
+*/
  module.exports = {
-  entry: {
-    bundle: './examples/main',
-    render: './examples/render'
-  },
+  entry: path.join(__dirname, 'examples/index.js'),
   output: {
-    path: path.join(__dirname, 'examples'),
-    filename: '[name].main.js',
+    path: path.join(__dirname, "examples"),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -28,6 +26,5 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
         use: ["style-loader", "css-loader"]
       }
     ]
-  },
-  plugins: [htmlWebpackPlugin]
+  }
 }; 
