@@ -1,0 +1,40 @@
+.speech-controller-wrapper{
+  .speech-controller-trigger {
+    cursor: pointer;
+  }
+  .speech-controller {
+    background-color: white;
+    display: block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: fixed;
+    padding: 15px 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-200px);
+    &.is-open {
+      animation: speech-controller-slide-in 0.4s ease-in-out forwards;
+    }
+    &.is-close {
+      animation: speech-controller-slide-in 0.4s ease-in-out forwards;
+    }
+  }
+  .icon{
+    img {
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+
+@keyframes speech-controller-slide-in {
+  from {transform: translateY(-200px)}
+  to {transform: translateY(0)}
+}
+@keyframes speech-controller-slide-out {
+  from {transform: translateY(0)}
+  to {transform: translateY(-200px)}
+}
