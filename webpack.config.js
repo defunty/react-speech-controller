@@ -9,7 +9,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
  module.exports = {
   entry: path.join(__dirname, 'examples/index.js'),
   output: {
-    path: path.join(__dirname, "examples"),
+    path: path.join(__dirname, "examples/dist"),
     filename: 'bundle.js',
   },
   module: {
@@ -24,6 +24,10 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
   }
